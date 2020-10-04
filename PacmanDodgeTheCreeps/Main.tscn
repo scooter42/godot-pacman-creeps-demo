@@ -4,8 +4,12 @@
 
 [node name="Main" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 400, 296 )
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 800.0
+margin_bottom = 600.0
 texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 800, 600 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
