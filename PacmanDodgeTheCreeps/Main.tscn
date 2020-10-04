@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/tile_02.png" type="Texture" id=1]
-[ext_resource path="res://assets/tile_132.png" type="Texture" id=2]
+[ext_resource path="res://Entities/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/enemyWalking_1.png" type="Texture" id=3]
 [ext_resource path="res://Entities/block/block.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/playerGrey_walk1.png" type="Texture" id=5]
 
 [node name="Main" type="Node2D"]
 
@@ -20,16 +19,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="tile_132" type="Sprite" parent="CanvasLayer/TextureRect"]
-position = Vector2( -112.983, 139.133 )
-texture = ExtResource( 2 )
-
 [node name="enemyWalking_1" type="Sprite" parent="CanvasLayer/TextureRect"]
-position = Vector2( -128.321, 237.507 )
+position = Vector2( -40, 136 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
-[node name="playerGrey_walk1" type="Sprite" parent="CanvasLayer/TextureRect"]
-position = Vector2( -137.835, 433.726 )
-texture = ExtResource( 5 )
+[node name="playerGrey_walk1" parent="CanvasLayer/TextureRect" instance=ExtResource( 2 )]
+position = Vector2( 288, 288 )
 
 [node name="block1" parent="CanvasLayer/TextureRect" instance=ExtResource( 4 )]
+position = Vector2( 416, 288 )
